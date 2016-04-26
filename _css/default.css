@@ -1,0 +1,218 @@
+body,html {
+	margin:0;
+	width:100%;
+	height:100%;
+	font-family: 'Open Sans', sans-serif;
+	font-size:12px;
+	color:#000;
+	padding:0;
+	overflow:hidden;
+	min-width:1024px; 
+	min-height:568px;
+}
+
+* { outline:none; }
+ul { margin:0; padding:0; list-style:none;}
+a { text-decoration:none; }
+
+
+#map-canvas { width:100%; height:100%; margin:auto;}
+#layout { width:100%; height:100%; min-width:1024px; }
+
+#layout #header { border-bottom:#343b48 solid 1px; }
+
+#layout #toolbar { width:200px; height:40px; background-color:#000; z-index:1; position:absolute; right:23px; top:60px; }
+#layout #toolbar ul { margin:0; padding:0; list-style:none; display:inline-block; }
+#layout #toolbar ul li { display:inline-block; width:40px; height:40px; float:left; color:#fff; }
+#layout #toolbar ul li a { width: 40px; height: 30px;text-align: center; display: block; padding-top: 10px; border-right: #343b48 dotted 1px; color:#fff; }
+#layout #toolbar ul li a:hover { color:#00ccff; }
+#layout #toolbar ul li a.last { border-right:none !important; }
+
+#layout #route { width:550px; position:absolute; top:105px; background-color:#1b1e25; z-index:1; right:5px; height:360px; display:block; color:#fff; display:none; }
+#layout #route a { color:#fff; }
+#layout #route a:hover { color:#00ccff; }
+#layout #route a.excel { color:#fff; background:url(../_img/xls.gif) no-repeat left; text-indent:20px; }
+#layout #route h1 { color:#fff; font-size:14px; margin:3px; padding:0; background:url(../_img/bck_panel_h1.png); height:26px; padding-top:3px; text-indent:8px; text-shadow: 1px 1px 0px #1b1e25;  }
+#layout #route a.btn_close { width:20px; height:20px;position:absolute; display:block; right:0; margin-top:6px; margin-right:7px; text-align:center;  color:#fff; } 
+#layout #route a.btn_close:hover { color:#1b1e25; } 
+#layout #route a.btn_close i { margin-top:5px; }
+#layout #route form fieldset { border:none;}
+#layout #route .container { margin:10px; }
+#layout #route .container .datagrid { height:185px; border:#ccc solid 1px; overflow-y:scroll; color:#000; margin-bottom:5px; }
+#layout #route .container .datagrid a { color:#06F !important; }
+
+#layout #users { width:450px; position:absolute; top:105px; background-color:#1b1e25; z-index:1; right:5px; height:350px; display:block; color:#fff; display:none; }
+#layout #users h1 { color:#fff; font-size:14px; margin:3px; padding:0; background:url(../_img/bck_panel_h1.png); height:26px; padding-top:3px; text-indent:8px; text-shadow: 1px 1px 0px #1b1e25; }
+#layout #users a.btn_close { width:20px; height:20px;position:absolute; display:block; right:0; margin-top:6px; margin-right:7px; text-align:center;  color:#fff; } 
+#layout #users a.btn_close:hover { color:#1b1e25; } 
+#layout #users a.btn_close i { margin-top:5px; }
+#layout #users form fieldset { border:none;}
+#layout #users .container { margin:10px; }
+#layout #users .container .datagrid { height:200px; border:#ccc solid 1px; overflow-y:scroll; color:#000; }
+
+#layout #groups { width:450px; position:absolute; top:105px; background-color:#1b1e25; z-index:1; right:5px; height:350px; display:block; color:#fff; display:none; }
+#layout #groups h1 { color:#fff; font-size:14px; margin:3px; padding:0; background:url(../_img/bck_panel_h1.png); height:26px; padding-top:3px; text-indent:8px; text-shadow: 1px 1px 0px #1b1e25; }
+#layout #groups a.btn_close { width:20px; height:20px;position:absolute; display:block; right:0; margin-top:6px; margin-right:7px; text-align:center;  color:#fff; } 
+#layout #groups a.btn_close:hover { color:#1b1e25; } 
+#layout #groups a.btn_close i { margin-top:5px; }
+#layout #groups form fieldset { border:none;}
+#layout #groups .container { margin:10px; }
+#layout #groups .container .datagrid { height:200px; border:#ccc solid 1px; overflow-y:scroll; color:#000; }
+
+
+#layout #geofence { width:450px; position:absolute; top:105px; background-color:#1b1e25; z-index:1; right:5px; height:350px; display:block; color:#fff; display:none; }
+#layout #geofence h1 { color:#fff; font-size:14px; margin:3px; padding:0; background:url(../_img/bck_panel_h1.png); height:26px; padding-top:3px; text-indent:8px; text-shadow: 1px 1px 0px #1b1e25; }
+#layout #geofence a.btn_close { width:20px; height:20px;position:absolute; display:block; right:0; margin-top:6px; margin-right:7px; text-align:center;  color:#fff; } 
+#layout #geofence a.btn_close:hover { color:#1b1e25; } 
+#layout #geofence a.btn_close i { margin-top:5px; }
+#layout #geofence .container { margin:10px; }
+#layout #geofence .container .datagrid { height:200px; border:#ccc solid 1px; overflow-y:scroll; color:#000; }
+#layout #geofence .container input[type="text"] { width:340px; border:#343b48 solid 1px; padding:7px; }
+#layout #geofence .container a.btn_save { color:#fff;  }
+
+#layout #geofences { width:450px; position:absolute; top:105px; background-color:#1b1e25; z-index:1; right:5px; height:350px; display:block; color:#fff; display:none; }
+#layout #geofences h1 { color:#fff; font-size:14px; margin:3px; padding:0; background:url(../_img/bck_panel_h1.png); height:26px; padding-top:3px; text-indent:8px; text-shadow: 1px 1px 0px #1b1e25; }
+#layout #geofences a.btn_close { width:20px; height:20px;position:absolute; display:block; right:0; margin-top:6px; margin-right:7px; text-align:center;  color:#fff; } 
+#layout #geofences a.btn_close:hover { color:#1b1e25; } 
+#layout #geofences a.btn_close i { margin-top:5px; }
+#layout #geofences .container { margin:10px; }
+#layout #geofences .container .datagrid { height:295px; border:#ccc solid 1px; overflow-y:scroll; color:#000; }
+
+#layout #pois { width:450px; position:absolute; top:105px; background-color:#1b1e25; z-index:1; right:5px; height:350px; display:block; color:#fff; display:none; }
+#layout #pois h1 { color:#fff; font-size:14px; margin:3px; padding:0; background:url(../_img/bck_panel_h1.png); height:26px; padding-top:3px; text-indent:8px; text-shadow: 1px 1px 0px #1b1e25; }
+#layout #pois a.btn_close { width:20px; height:20px;position:absolute; display:block; right:0; margin-top:6px; margin-right:7px; text-align:center;  color:#fff; } 
+#layout #pois a.btn_close:hover { color:#1b1e25; } 
+#layout #pois a.btn_close i { margin-top:5px; }
+#layout #pois .container { margin:10px; }
+#layout #pois .container .datagrid { height:220px; border:#ccc solid 1px; overflow-y:scroll; color:#000; }
+#layout #pois .container input[type="text"] { width:340px; border:#343b48 solid 1px; padding:7px; }
+#layout #pois .container a.btn_save { color:#fff;  }
+
+.btn_save_gz { padding: 5px;
+background-color: #008FD8;
+width: 80px;
+border-radius: 2px;
+text-align: center;
+display: inline-block;
+color: #FFF;
+font-weight: bold;
+text-decoration: none;
+   }
+
+
+#layout #georoute { width:450px; position:absolute; top:105px; background-color:#1b1e25; z-index:1; right:5px; height:350px; display:block; color:#fff; display:none; }
+#layout #georoute h1 { color:#fff; font-size:14px; margin:3px; padding:0; background:url(../_img/bck_panel_h1.png); height:26px; padding-top:3px; text-indent:8px; text-shadow: 1px 1px 0px #1b1e25; }
+#layout #georoute a.btn_close { width:20px; height:20px;position:absolute; display:block; right:0; margin-top:6px; margin-right:7px; text-align:center;  color:#fff; } 
+#layout #georoute a.btn_close:hover { color:#1b1e25; } 
+#layout #georoute a.btn_close i { margin-top:5px; }
+#layout #georoute .container { margin:10px; }
+#layout #georoute .container .datagrid { height:260px; border:#ccc solid 1px; overflow-y:scroll; color:#000; }
+#layout #georoute .container input[type="text"] { width:340px; border:#343b48 solid 1px; padding:7px; }
+#layout #georoute .container a.btn_save { color:#fff;  }
+
+#layout #checkpoints { width:450px; position:absolute; top:105px; background-color:#1b1e25; z-index:1; right:5px; height:350px; display:block; color:#fff; display:none; }
+#layout #checkpoints h1 { color:#fff; font-size:14px; margin:3px; padding:0; background:url(../_img/bck_panel_h1.png); height:26px; padding-top:3px; text-indent:8px; text-shadow: 1px 1px 0px #1b1e25; }
+#layout #checkpoints a.btn_close { width:20px; height:20px;position:absolute; display:block; right:0; margin-top:6px; margin-right:7px; text-align:center;  color:#fff; } 
+#layout #checkpoints a.btn_close:hover { color:#1b1e25; } 
+#layout #checkpoints a.btn_close i { margin-top:5px; }
+#layout #checkpoints .container { margin:10px; }
+#layout #checkpoints .container .datagrid { height:260px; border:#ccc solid 1px; overflow-y:scroll; color:#000; }
+#layout #checkpoints .container input[type="text"] { width:340px; border:#343b48 solid 1px; padding:7px; }
+#layout #checkpoints .container a.btn_save { color:#fff;  }
+
+
+
+
+#layout #georoute_add { width:450px; position:absolute; top:105px; background-color:#1b1e25; z-index:1; right:5px; height:350px; display:block; color:#fff; display:none; }
+#layout #georoute_add h1 { color:#fff; font-size:14px; margin:3px; padding:0; background:url(../_img/bck_panel_h1.png); height:26px; padding-top:3px; text-indent:8px; text-shadow: 1px 1px 0px #1b1e25; }
+#layout #georoute_add a.btn_close { width:20px; height:20px;position:absolute; display:block; right:0; margin-top:6px; margin-right:7px; text-align:center;  color:#fff; } 
+#layout #georoute_add a.btn_close:hover { color:#1b1e25; } 
+#layout #georoute_add a.btn_close i { margin-top:5px; }
+#layout #georoute_add .container { margin:10px; }
+#layout #georoute_add .container .datagrid { height:260px; border:#ccc solid 1px; overflow-y:scroll; color:#000; }
+#layout #georoute_add .container input[type="text"] { width:340px; border:#343b48 solid 1px; padding:7px; }
+#layout #georoute_add .container a.btn_save { color:#fff;  }
+
+
+#assets::-webkit-scrollbar{ width:10px; background-color:#1b1e25; margin-left:5px; } 
+#assets::-webkit-scrollbar-thumb{
+background-color:#00acde;
+}
+#assets::-webkit-scrollbar-thumb:hover{
+background-color:#B03C3F;
+}
+#assets::-webkit-scrollbar-thumb:active{
+background-color:#fff;
+} 
+
+#layout #assets h1 { margin:0; padding:0; font-size:14px; background-color:#1b1e25; height:29px; text-shadow: 1px 1px 0px #1b1e25; width:99%; }
+
+#layout #footer { width:100%; position:relative; min-height:100px; bottom:0; left:0; right:0; background-color:#000; z-index:100; min-height:150px; background-color:#fff; }
+#layout #footer .datagrid table tbody tr td { padding:1px 5px; }
+#layout #footer .datagrid table thead tr th { padding: 6px 5px; }
+#layout #footer .container { height:150px; position:relative; overflow:scroll; }
+
+.datagrid {  background-color:#fff; }
+.datagrid table { }
+.datagrid table thead tr th { padding:5px 5px; text-align:left; background-color:#f5f5f5; border-bottom:#ebebeb solid 1px; border-right:#f1f1f1 solid 1px; padding-right:0; }
+.datagrid table thead tr th a { color:#717171; display:block;  }
+.datagrid table thead tr th a.order {  background: url(_admin/_img/bck_sort.png) no-repeat right 4px; }
+.datagrid table thead tr th a.order.asc { background: url(_admin/_img/bck_sort.png) no-repeat right 4px; }
+.datagrid table thead tr th a.order.desc { background: url(_admin/_img/bck_sort.png) no-repeat right -22px; }
+
+.datagrid table tbody tr:nth-child(even) { background-color:#f9f9f9; }
+.datagrid table tbody tr:nth-child(odd) { background-color:#fff; }
+.datagrid table tbody tr td { padding:5px 5px; border-top:#f1f1f1 solid 1px; color:#333;  }
+.datagrid table tbody tr:hover { background-color:#9CF !important;}
+.datagrid table tbody tr.active { background-color:#9CF !important;}
+
+#modal.darkblue { background-color:#000; color:#fff; }
+#modal.darkblue form { margin:5px;}
+#modal.darkblue form label { color:#00ccff; font-weight:normal;}
+#modal.darkblue form a.btn_save { background-color:#00ccff; color:#fff; padding:5px; width:100px; text-align:center; border-radius:4px;}
+#modal.darkblue form fieldset input[type="password"] { border:#ccc solid 1px; padding:5px; width:220px; }
+
+
+#modal { width: 900px; border:#ccc solid 1px;}
+#modal h1 { color:#fff; font-size:14px; margin:3px; padding:0; background:url(../_img/bck_panel_h1.png); height:26px; padding-top:3px; text-indent:8px; text-shadow: 1px 1px 0px #1b1e25; }
+
+#modal.small { width: 400px;}
+
+#modal .tabs { background-color:#1a1d25; margin-bottom:20px; }
+#modal .tabs ul li { float:left;}
+#modal .tabs ul li a { color:#999999; min-width:100px; text-align:center; display:inline-block; padding:10px; border-right:#4a494a solid 1px; font-weight:bold; }
+#modal .tabs ul li a.active { background-color:#fff; color:#333;}
+
+#modal form fieldset { border:none;}
+#modal form fieldset label { font-weight:bold; display:block; }
+#modal form fieldset input[type="text"] { border:#ccc solid 1px; padding:5px; width:220px; }
+
+.fuel { position:relative; height:10px; width:97px; border:#343b48 solid 1px; margin-left:0px; }
+.fuel span { font-size: 10px; position: absolute; margin-left: 5px; margin-top: -2px; color:#737987; right:-45px; }
+.fuel ul li { width:17px; height:10px; display:block; float:left; background-color:#F90; margin-right:3px; }
+.fuel ul li:nth-child(1) { !important; background-color:#f3002e; }
+.fuel ul li:nth-child(2) { !important; background-color:#ffde00; }
+.fuel ul li:nth-child(3) { !important; background-color:#ffde00; }
+.fuel ul li:nth-child(4) { !important; background-color:#00f300; }
+.fuel ul li:nth-child(5) { margin-right:0 !important; background-color:#00f300; }
+
+a.excel { color:#fff; background:url(../_img/xls.gif) no-repeat left; text-indent:20px; }
+
+/* SPINNER */
+
+#loading { background-color:#1b1e25; position:fixed; width:100%; height:100%; top:0; left:0; right:0; bottom:0; z-index:1000000; }
+#loading img { top:50%; left:50%; margin-left:-143px; margin-top:-146px; position:absolute; }
+#spinner { -webkit-animation: spin 3s infinite linear; }
+@-webkit-keyframes rotation { from {-webkit-transform: rotate(360deg);} to {-webkit-transform: rotate(360deg);} }
+
+.label {
+     color: #fff;
+     background-color: #1b1e25;
+     font-size: 10px;
+     font-weight: bold;
+     text-align: center;
+     width: 60px;     
+     border-radius:3px;
+	 padding:2px;
+     white-space: nowrap;
+   }
